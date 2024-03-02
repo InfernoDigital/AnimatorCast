@@ -33,13 +33,19 @@ public class AnimatorCast : MonoBehaviour
     // Public animator variable
     public Animator animator;
 
+    public bool DebugEnabled;
+
     // List of animation sequences
     public List<AnimationSequence> sequences = new List<AnimationSequence>();
 
     // Public method to perform the roll call for a specific sequence by name
     public void RollCall(string sequenceName)
     {
-        Debug.LogWarning("Warning. RollCall enabled.");
+
+        if (DebugEnabled) 
+        { 
+            Debug.LogWarning("Warning. RollCalling " + sequenceName);
+        }
 
         // Check if the animator is assigned
         if (animator == null)
@@ -90,5 +96,11 @@ public class AnimatorCast : MonoBehaviour
                     break;
             }
         }
+
+        if (DebugEnabled)
+        {
+            Debug.LogWarning("Warning. RollCalling " + sequenceName + " Completed.");
+        }
+
     }
 }
