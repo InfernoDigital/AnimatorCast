@@ -1,6 +1,9 @@
 # AnimatorCast
 An upgraded version of my previous AnimParameterBehavior Script that is meant for use as a script on Gameobjects.
 
+![image](https://github.com/InfernoDigital/AnimatorCast/assets/12396056/3d345291-a2c6-4e3f-8ecc-eb69c085a940)
+
+
 This script, like the last one, takes an Animator and sequences through a list of Animator Parameters making changes as it goes.
 However, the previous script could only be called from within an Animator to change it's own Parameters, whereas this script has a Public Animator Variable
 so any gameobject can link to an animator to change it's Parameters.
